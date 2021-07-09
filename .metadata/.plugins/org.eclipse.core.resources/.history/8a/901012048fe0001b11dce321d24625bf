@@ -1,0 +1,86 @@
+package QAmonCodeTestByFahmidaFarzana;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+package QAmonCodeTestByFahmidaFarzana;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class SignPagePomTestNG {
+	
+public static void main(String[] args) {
+		
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver=new ChromeDriver();
+		
+		driver.get("https://www.acquireangel.com/signin");
+		
+		// Username test action
+		SignInPageObjectLocator.email(driver).sendKeys("hamidsaymon9@gmail.com");
+		
+		// Password test action
+		SignInPageObjectLocator.password(driver).sendKeys("Abc12345");
+		
+		// Remember me test action
+		SignInPageObjectLocator.rememberme(driver).click();
+		
+		// Sign in button test action
+		SignInPageObjectLocator.signinbutton(driver).click();
+		
+		
+		//Use the @BeforeTest, @Test, @AfterTest annotation
+		// create class variable
+		private static WebDriver driver=null;
+		
+		// Before test function
+		
+			@BeforeTest
+			public void setUpTest()
+			{
+				WebDriverManager.chromedriver().setup();
+				driver=new ChromeDriver();
+			}
+		
+			// test function
+			
+			@Test
+			public void testStep1() throws InterruptedException
+			{
+				driver.get("https://www.acquireangel.com/signin");
+				
+				// username test action
+				SignInPageObjectLocator.email(driver).sendKeys("hamidsaymon9@gmail.com");
+				
+				// password test action
+				SignInPageObjectLocator.password(driver).sendKeys("Abc12345");
+				
+				// remember me test action
+				SignInPageObjectLocator.rememberme(driver).click();
+				
+				// sign in button test action
+				SignInPageObjectLocator.signinbutton(driver).click();
+				
+				Thread.sleep(3000);
+			}
+			
+			@Test
+			public void testStep2() throws InterruptedException
+			{
+				driver.get("https://nexchar.com/contactus");
+				
+				driver.findElement(By.id("Full")).sendKeys("ABC");
+				
+				Thread.sleep(2000);
+			}
+		
+			
+		// close function
+			@AfterTest
+			public void tearDown()
+		{
+			driver.close();
+			//driver.quit();
+			//System.out.println("Homepage close");
+		}
+
+}
+}

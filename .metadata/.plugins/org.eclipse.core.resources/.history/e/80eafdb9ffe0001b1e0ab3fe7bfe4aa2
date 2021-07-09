@@ -1,0 +1,25 @@
+package QAmonCodeTestByFahmidaFarzana;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class OptionalAutomationQ {
+	
+	//Main Method Create
+	public static void main(String[] args) throws InterruptedException{
+		
+		//Use the webdriverManager denpendency
+		WebDriverManager.chromedriver().setup();
+		
+		//Webdriver object create
+		WebDriver driver= new ChromeDriver();
+		
+		//visit the URL
+		driver.get("http://automationpractice.com/index.php?controller=authentication&back=my-account#account-creation");
+		
+		
+	}
+
+}

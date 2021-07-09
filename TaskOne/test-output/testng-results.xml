@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="38541" started-at="2021-07-09T08:32:31Z" finished-at="2021-07-09T08:33:10Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="38541" started-at="2021-07-09T08:32:31Z" finished-at="2021-07-09T08:33:10Z">
+      <class name="QAmonCodeTestByFahmidaFarzana.SignPagePomTestNG">
+        <test-method status="PASS" signature="setUpTest()[pri:0, instance:QAmonCodeTestByFahmidaFarzana.SignPagePomTestNG@27c20538]" name="setUpTest" is-config="true" duration-ms="21071" started-at="2021-07-09T01:32:31Z" finished-at="2021-07-09T01:32:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpTest -->
+        <test-method status="PASS" signature="testStep1()[pri:0, instance:QAmonCodeTestByFahmidaFarzana.SignPagePomTestNG@27c20538]" name="testStep1" duration-ms="16315" started-at="2021-07-09T01:32:52Z" finished-at="2021-07-09T01:33:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStep1 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:QAmonCodeTestByFahmidaFarzana.SignPagePomTestNG@27c20538]" name="tearDown" is-config="true" duration-ms="1110" started-at="2021-07-09T01:33:09Z" finished-at="2021-07-09T01:33:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- QAmonCodeTestByFahmidaFarzana.SignPagePomTestNG -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

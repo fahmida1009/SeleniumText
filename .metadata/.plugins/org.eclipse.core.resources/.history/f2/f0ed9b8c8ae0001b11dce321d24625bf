@@ -1,0 +1,31 @@
+package QAmonCodeTestByFahmidaFarzana;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class SignPagePomTestNG {
+	
+public static void main(String[] args) {
+		
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver=new ChromeDriver();
+		
+		driver.get("https://nexchar.com/signin");
+		
+		// Username test action
+		SignInPageObjectLocator.username(driver).sendKeys("hamidsaymon9@gmail.com");
+		
+		// Password test action
+		SignInPageObjectLocator.password(driver).sendKeys("Abc12345");
+		
+		// Remember me test action
+		SignInPageObjectLocator.rememberme(driver).click();
+		
+		// Sign in button test action
+		SignInPageObjectLocator.signinbutton(driver).click();
+		
+
+}
+}
